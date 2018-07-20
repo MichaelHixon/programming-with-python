@@ -176,10 +176,10 @@ class TomeRater(object):
             print(book)
 
     def print_users(self):
-        for user in self.users.values:
+        for user in self.users:
             print(user)
 
-    def most_read_book(self) -> List['Books']:
+    def get_most_read_book(self) -> List['Books']:
         if self.books:
             max_read = max(self.books.values())
             return list(k for k, v in self.books.items() if v == max_read)
